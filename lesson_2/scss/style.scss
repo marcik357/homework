@@ -1,0 +1,74 @@
+@import '_header';
+@import '_footer';
+
+body {
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.main {
+
+    // .main__container
+    &__container {}
+
+    // .main__title
+    &__title {
+        font-size: 40px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.article {
+
+    // .article__title
+    &__title {}
+
+    // .article__subtitle
+    &__subtitle {}
+
+    // .article__regular-paragraph
+    &__regular-paragraph {}
+
+    // .article__video
+    &__video {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.title {
+    font-size: 32px;
+}
+
+.subtitle {}
+
+.regular-paragraph {
+
+    // .regular-paragraph__company-name
+    &__company-name {
+        text-transform: uppercase;
+        color: red
+    }
+}
+
+.paragraph-img {
+    display: block;
+    margin: 0 auto;
+}

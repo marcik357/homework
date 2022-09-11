@@ -1,0 +1,22 @@
+.footer {}
+
+.footer-menu {
+
+    // .footer-menu__list
+    &__list {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }
+
+    // .footer-menu__item
+    &__item {
+        margin: 0px 0px 0px 15px;
+    }
+
+    // .footer-menu__link
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 3</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="body-wrapper">
+    <header class="header">
+      <div class="container">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#all" class="menu__link menu__link-active">1</a>
+            </li>
+            <li class="menu__item">
+              <a href="#id" class="menu__link">2</a>
+            </li>
+            <li class="menu__item">
+              <a href="#anchor" class="menu__anchor-link">Ябычный якорь</a>
+            </li>
+            <li class="menu__item">
+              <a href="#class" class="menu__link">3</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contextual" class="menu__link">4</a>
+            </li>
+            <li class="menu__item">
+              <a href="#tag" class="menu__link">5</a>
+            </li>
+            <li class="menu__item">
+              <a href="#links" class="menu__link">6</a>
+            </li>
+            <li class="menu__item">
+              <a href="#next" class="menu__link">7</a>
+            </li>
+            <li class="menu__item">
+              <a href="#child" class="menu__link">8</a>
+            </li>
+            <li class="menu__item">
+              <a href="#following" class="menu__link">9</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+
+        <h1 class="main__title" title="статья честно спизжена)))">30 CSS селекторов, которые вы должны запомнить</h1>
+
+
+        <div class="selector-block">
+          <h2 id="all" class="selector-block__title">1. *</h2>
+          <pre>
+          <code>
+            <span class="selector">*</span> {
+              <span class="selector-property">margin</span>: 0;
+              <span class="selector-property">padding</span>: 0;
+            }
+          </code>
+        </pre>
+          <p class="selector-block__text">
+            Начнём с самого простого.
+          </p>
+          <p class="selector-block__text">
+            Универсальный селектор соответствует любому элементу на странице. Часто разработчики используют его для
+            обнуления
+            свойств margin и padding. Это допустимо в тестовом режиме, но я не рекомендую использовать этот селектор в
+            рабочих
+            проектах. Он слишком нагружает браузер.
+          </p>
+          <p class="selector-block__text">
+            Универсальный селектор <span class="code-in-text">*</span> также можно использовать для стилизации всех
+            потомков элемента.
+          </p>
+          <pre>
+          <code>
+            <span class="selector">#container *</span> {
+              <span class="selector-property">border</span>: 1px solid black;
+            }
+          </code>
+        </pre>
+          <p class="selector-block__text">
+            В данном примере стиль применится ко всем потомкам элемента <span class="code-in-text">#container</span>
+            <span class="code-in-text">div</span>. Но, повторюсь, не стоит
+            использовать эту
+            технику слишком часто, а лучше вообще её не использовать.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE6+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <img src="img/all-1.jpg" alt="скрин стиля">
+          <img src="img/all-2.jpg" alt="скрин экрана с примененным стилем'">
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="id" class="selector-block__title">2. #X</h2>
+          <pre>
+          <code>
+            <span class="selector">#example-id</span> {
+              <span class="selector-property">color</span>: red;
+            }
+          </code>
+        </pre>
+          <p class="selector-block__text">
+            Использование символа решётки позволяет обратиться к уникальному идентификатору элемента <span
+              class="code-in-text">id</span>. Но старайтесь не
+            злоупотреблять использованием идентификаторов.
+          </p>
+          <blockquote>
+            Спросите себя: мне действительно нужно использовать <span class="code-in-text">id</span> для этого элемента?
+          </blockquote>
+          <p class="selector-block__text">
+            Идентификатор <span class="code-in-text">id</span> должен быть уникальным и может использоваться на странице
+            только один раз. При возможности старайтесь
+            обходиться без идентификаторов. Старайтесь использовать тэги или псевдоклассы.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE6+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <p id="example-id">
+              Этот текст будет красным
+            </p>
+            <p>
+              А этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="class" class="selector-block__title">3. .X</h2>
+          <pre>
+          <code>
+            <span class="selector">.example-class</span> {
+              <span class="selector-property">color</span>: red;
+            }
+          </code>
+        </pre>
+          <p class="selector-block__text">
+            <span class="code-in-text">class</span> - это селектор класса. Отличие селектора <span
+              class="code-in-text">class</span> от <span class="code-in-text">id</span> в том, что класс не должен быть
+            уникальным и может
+            использоваться для выбора нескольких элементов на странице. Использование <span
+              class="code-in-text">id</span>
+            позволяет выбрать конкретный уникальный
+            элемент.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE6+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <p class="example-class">
+              Этот текст будет красным
+            </p>
+            <p>
+              А этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="contextual" class="selector-block__title">4. X Y</h2>
+          <pre>
+          <code>
+            <span class="selector">ol li</span> {
+              <span class="selector-property">color</span>: red;
+            }
+          </code>
+        </pre>
+          <p class="selector-block__text">
+            Ещё один из часто используемых типов селекторов - это <span class="code-in-text">контекстный</span>
+            селектор.
+            Он используется для выбора элементов,
+            удовлетворяющих определённому контексту. Например, вместо того, чтобы задавать стиль всем ссылкам, вам нужно
+            изменить
+            отображение только тех ссылок, которые расположены внутри несортированного списка.
+          </p>
+          <blockquote>
+            <b>Совет</b> - Если ваш селектор выглядит так: <span class="code-in-text">X Y Z A B.error</span>, то вы
+            совершаете ошибку. Старайтесь избегать таких длинных
+            вложений.
+          </blockquote>
+          <blockquote id="anchor">
+            А так работает обычный <span class="code-in-text">якорь</span>
+          </blockquote>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE6+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <p class="example-contextual">
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>
+            </p>
+            <ol>
+              <li>Этот текст будет красным</li>
+              <li>Этот текст будет красным</li>
+              <li>Этот текст будет красным</li>
+            </ol>
+            <p>
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="tag" class="selector-block__title">5. X</h2>
+          <pre>
+          <code>
+            <span class="selector">mark</span> {
+              <span class="selector-property">color</span>: red;
+            }
+          </code>
+        </pre>
+          <p class="selector-block__text">
+            Что вы будете делать, если вам понадобится выбрать только элементы определённого <span
+              class="code-in-text">типа</span>? В этом случае вы не сможете
+            использовать <span class="code-in-text">id</span> или <span class="code-in-text">class</span>. И вам на
+            помощь придёт селектор по типу элемента. Если, к примеру, вам нужны все несортированные списки,
+            просто используйте <span class="code-in-text">ul {}</span>.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE6+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <p>
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>
+            </p>
+            <p>
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>. <mark>А это будет красным
+                <small>(желтое выделение фона за счет специфики конкретно этого тэга)</small></mark>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="links" class="selector-block__title">6. X:visited и X:link</h2>
+          <pre>
+            <code>
+              <span class="selector">a:link</span> {
+                <span class="selector-property">color</span>: red;
+              }
+              <span class="selector">a:visted</span> {
+                <span class="selector-property">color</span>: purple;
+              }
+            </code>
+          </pre>
+          <p class="selector-block__text">
+            Мы используем псевдокласс <span class="code-in-text">:link</span> для стилизации ссылок, на которые
+            пользователь ещё не нажимал.
+          </p>
+          <p class="selector-block__text">
+            Также нам доступен псевдокласс <span class="code-in-text">:visited</span> для стилизации только тех ссылок,
+            на которые пользователь нажал.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE7+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <a href="#">Это ссылка, но она никуда не ведет и после нажатия станет фиолетовой (тебя перекинет вверх
+              страницы...)</a>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="next" class="selector-block__title">7. X + Y</h2>
+          <pre>
+            <code>
+              <span class="selector">a + p</span> {
+                <span class="selector-property">color</span>: red;
+              }
+            </code>
+          </pre>
+          <p class="selector-block__text">
+            Это соседний селектор. Он поможет нам выбрать только тот элемент, который следует сразу же за указанным
+            элементом. В
+            этом примере мы выберем только первый параграф текста, следующий сразу за тэгом <span
+              class="code-in-text">a</span>.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE7+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <a href="#">Это ссылка из прошлого примера, работает она аналогично</a>
+            <p>
+              А это параграф с примененным стилем, он красный
+            </p>
+            <p>
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="child" class="selector-block__title">8. X > Y</h2>
+          <pre>
+            <code>
+              <span class="selector">div#container > ul</span> {
+                <span class="selector-property">border</span>: 1px solid black;
+              }
+            </code>
+          </pre>
+          <p class="selector-block__text">
+            Разница между селекторами <span class="code-in-text">X Y</span> и <span class="code-in-text">X > Y</span> в
+            том, что в последнем примере мы выберем только прямого потомка.
+            Например, у нас
+            есть такой код.
+          </p>
+          <pre>
+            &lt;div id="container"&gt;
+              &lt;ul&gt;
+                  &lt;li&gt; List Item
+                    &lt;ul&gt;
+                      &lt;li&gt; Child &lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt; List Item &lt;/li&gt;
+                  &lt;li&gt; List Item &lt;/li&gt;
+                  &lt;li&gt; List Item &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          </pre>
+          <p class="selector-block__text">
+            Селектор <span class="code-in-text">#container > ul</span> выберет только тот элемент <span
+              class="code-in-text">ul</span>, который является прямым потомком элемента <span class="code-in-text">div с
+              id</span> равным
+            container. Он не выберет, например, элемент <span class="code-in-text">ul</span> , являющийся потомком
+            первого элемента <span class="code-in-text">li</span>.
+          </p>
+          <p class="selector-block__text">
+            Данный способ выбора элементов является очень эффективным. Рекомендую вам использовать его, особенно при
+            работе с
+            JavaScript.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE7+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <p>
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>.
+            </p>
+            <p>
+              Этот текст унаследует цвет от <span class="code-in-text">.body-wrapper</span>.
+              <i>А это текст в теге &lt;i&gt; c применением специального стиля (он красный)</i>
+            </p>
+            <i>Этот текст тоже в теге &lt;i&gt; но он не обернут тегом &lt;p&gt;</i>
+            <p>
+              <small>Да этот пример был не такой как в тесте этого раздела ибо мне лень было его переделывать.</small>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <h2 id="following" class="selector-block__title">9. X ~ Y</h2>
+          <pre>
+            <code>
+              <span class="selector">ul ~ p</span> {
+                <span class="selector-property">color</span>: red;
+              }
+            </code>
+          </pre>
+          <p class="selector-block__text">
+            Этот селектор похож на <span class="code-in-text">X + Y</span>, но он менее строгий. Соседний селектор
+            (<span class="code-in-text">ul + p</span>) выберет только первый элемент, следующий
+            сразу же за указанным элементом. Селектор <span class="code-in-text">X ~ Y</span> выберет все элементы <span
+              class="code-in-text">p</span>, расположенные после элемента <span class="code-in-text">ul</span>.
+          </p>
+          <h3 class="selector-block__subtitle">Совместимость</h3>
+          <ul class="selector-block__compatibility">
+            <li>IE7+</li>
+            <li>Firefox</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+            <li>Opera</li>
+          </ul>
+          <h3 class="selector-block__subtitle">Пример</h3>
+          <div class="example">
+            <ul>
+              <li>Пункт первый списка</li>
+              <li>Пункт второй списка</li>
+              <li>Пункт третий списка</li>
+            </ul>
+            <p>
+              Этот текст красный из-за примененного стиля.
+            </p>
+            <h4>А это внезапно заголовок 4го уровня и он естественно не красный</h4>
+            <p>
+              Этот текст красный из-за примененного стиля.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="selector-block">
+          <img src="img/thatsallfolkx.webp" alt="that's all folks">
+          <h2 class="selector-block__title">Продолжение следует... <small>но это не точно :)</small></h2>
+          <h4>Лучше не делать такие отступы как у тега &lt;small&gt; строкой выше</h4>
+        </div>
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+    </footer>
+  </div>
+</body>
+
+</html>
