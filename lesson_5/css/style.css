@@ -89,6 +89,7 @@ span {
   color: #32c8ff;
   font-family: "Beaufort for LOL Bold", sans-serif;
   font-size: 19px;
+  text-decoration: underline;
   margin: 16px 0 5px;
   text-shadow: 0px 0px 5px rgba(223, 23, 23, 0.568), 1px 3px 5px rgba(17, 17, 17, 0.568);
 }
@@ -178,6 +179,7 @@ h1 + p {
   font-size: 80px;
   margin: 25px 0;
   text-shadow: 1px 3px 5px #32c8ff, 2px 3px 15px rgb(243, 131, 2);
+  text-align: center;
 }
 .introduction__authors {
   display: -webkit-box;
@@ -219,6 +221,7 @@ h1 + p {
   font-size: 40px;
   font-style: italic;
   margin: 80px 0 35px;
+  text-decoration: underline;
 }
 .news__block img {
   width: 100%;
@@ -270,6 +273,7 @@ h1 + p {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 18px;
+  text-align: right;
 }
 .card__regular-paragraph {
   text-align: justify;
