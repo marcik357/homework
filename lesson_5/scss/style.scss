@@ -99,9 +99,9 @@ span {
     color: #32c8ff;
     font-family: 'Beaufort for LOL Bold', sans-serif;
     font-size: 19px;
-    text-decoration: underline;
+    text-decoration: line-through;
     margin: 16px 0 5px;
-    text-shadow: 0px 0px 5px rgba(223, 23, 23, 0.568), 1px 3px 5px rgba(17, 17, 17, 0.568);
+    text-shadow: 18px -8px 3px rgb(223 23 23 / 57%), 1px 3px 5px rgb(17 17 17 / 57%);
 }
 
 .regular-paragraph {
@@ -193,11 +193,11 @@ h1+p {
 }
 
 .main {
+    margin: 70px 0;
 
     // .main__cover
     &__cover {
         height: 50vh;
-        margin-top: 70px;
     }
 
     // .main__cover-img
@@ -316,6 +316,8 @@ h1+p {
     justify-content: space-around;
 }
 
+// ============================================================================
+
 .card {
     border: 2px solid #c89b3c;
     max-width: 500px;
@@ -374,5 +376,20 @@ h1+p {
     // .card__ability-title
     &__ability-title {
         margin-top: 0;
+    }
+}
+
+.footer {
+    background-color: #111;
+    width: 100%;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    img {
+        height: 50px;
     }
 }
