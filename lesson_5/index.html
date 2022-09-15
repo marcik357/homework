@@ -14,24 +14,33 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <nav class="header__menu menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a href="#all" class="menu__link menu__link-active">1</a>
-            </li>
-            <li class="menu__item">
-              <a href="#id" class="menu__link">2</a>
-            </li>
-            </li>
-          </ul>
-        </nav>
-
+        <div class="header-wrapper">
+          <a class="header__logo logo" href="https://wildrift.leagueoflegends.com/">
+            <img src="img/logo-white.png" alt="wildrift">
+          </a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#new-champions" class="menu__link menu__link-active">НОВЫЕ ЧЕМПИОНЫ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#peculiarities" class="menu__link">ОСОБЕННОСТИ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#game-mode" class="menu__link">ИГРОВЫЕ РЕЖИМЫ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#champion-changes" class="menu__link">CHAMPION CHANGES</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main class="main">
-      <div class="banner">
-        <img class="banner__img" src="img/baner.jpg" alt="банер">
+      <div class="main__cover">
+        <img class="main__cover-img" src="img/cover.jpg" alt="cover">
       </div>
 
       <section class="news-article">
@@ -49,14 +58,14 @@
               3.4!
             </p>
             <div class="introduction__authors">
-              <span class="introduction__authors-title">АВТОР</span>
+              <span class="introduction__authors-title title">АВТОР</span>
               <ul class="introduction__authors-list">
                 <li class="introduction__authors-item">Алиса Лабрек</li>
                 <li class="introduction__authors-item">Ник Фриджия</li>
                 <li class="introduction__authors-item">Шон Мейсон</li>
               </ul>
             </div>
-            <hr>
+            <div class="separator"></div>
             <p class="introduction__regular-paragraph regular-paragraph">
               Встречайте обновление 3.4! Встречайте обновление 3.4!
             </p>
@@ -90,7 +99,7 @@
                 target="_blank">видео-обзор</a>
               обновления 3.4!
             </p>
-            <iframe src="https://www.youtube.com/embed/Vm_-Xag3vXQ?hl=ru" width="100%" height="100%" frameborder="0"
+            <iframe src="https://www.youtube.com/embed/Vm_-Xag3vXQ?hl=ru" width="100%" height="600" frameborder="0"
               allow="autoplay" title="Youtube iframe"></iframe>
             <p class="introduction__regular-paragraph regular-paragraph">
               P.S. Новый начальный предмет поддержки Древний щит позволяет игрокам периодически добивать миньонов, при
@@ -113,7 +122,7 @@
             </h2>
 
             <div class="news__block">
-              <h3 class="block__title title">
+              <h3 id="new-champions" class="block__title title">
                 НОВЫЕ ЧЕМПИОНЫ
               </h3>
               <h4 class="block__subtitle subtitle">
@@ -156,13 +165,13 @@
             </div>
 
             <div class="news__block">
-              <h3 class="block__title title">
+              <h3 id="peculiarities" class="block__title title">
                 ОСОБЕННОСТИ
               </h3>
               <h4 class="block__subtitle subtitle">
                 ОЧКИ ЧЕМПИОНА
               </h4>
-              <p class="block__regular-paragraph regular-paragraph reminder">
+              <p class="block__regular-paragraph regular-paragraph">
                 В обновлении 3.4 мы вносим изменения в систему очков чемпиона. Сейчас вы можете повышать ранг мастерства
                 только у
                 конкретных чемпионов, но скоро у вас появится возможность получать очки еще и для каждой роли. Вот как
@@ -186,8 +195,8 @@
                 НОВОСТИ О ГИЛЬДИЯХ
               </h4>
               <img src="img/content/guild-news.jpg" alt="few heroes before battle">
-              <p class="block__regular-paragraph regular-paragraph reminder">
-                Недавно мы выпустили <a
+              <p class="block__regular-paragraph regular-paragraph">
+                Недавно мы выпустили <a class="regular-paragraph-link"
                   href="https://wildrift.leagueoflegends.com/ru-ru/news/announcements/upcoming-changes-to-guilds-and-gvg/"
                   target="_blank">статью</a>, посвященную изменениям, которые коснутся гильдий и Состязаний, и хотим
                 также упомянуть о
@@ -334,7 +343,7 @@
             </div>
 
             <div class="news__block">
-              <h3 class="block__title title">
+              <h3 id="game-mode" class="block__title title">
                 ИГРОВЫЕ РЕЖИМЫ
               </h3>
               <img src="img/content/game-mode-1.jpg" alt="game process">
@@ -353,13 +362,13 @@
                   Чтобы победить, нужно выполнить любое из следующих условий.
                   <ul>
                     <li>
-                      Убить вражеского чемпиона 2 раза до появления сужающегося круга.
+                      Убить вражеского чемпиона <span>2 раза</span> до появления сужающегося круга.
                     </li>
                     <li>
-                      Убить вражеского чемпиона 1 раз после появления сужающегося круга.
+                      Убить вражеского чемпиона <span>1 раз</span> после появления сужающегося круга.
                     </li>
                     <li>
-                      Уничтожить первую башню.
+                      Уничтожить <span>первую</span> башню.
                     </li>
                   </ul>
                 </li>
@@ -367,14 +376,15 @@
                   Во время матча появляется сужающийся круг.
                   <ul>
                     <li>
-                      Он возникает спустя 8 минут после начала игры.
+                      Он возникает спустя <span>8 минут</span> после начала игры.
                     </li>
                     <li>
-                      начале круг охватывает всю карту. Через 30 секунд он начинает сужаться.
+                      начале круг охватывает всю карту. Через <span>30 секунд</span> он начинает сужаться.
                     </li>
                     <li>
-                      Круг перестает сужаться спустя 9 минут 30 секунд после начала игры, и его окончательный радиус
-                      составляет 5 метров.
+                      Круг перестает сужаться спустя <span>9 минут 30 секунд</span> после начала игры, и его
+                      окончательный радиус
+                      составляет <span>5 метров</span>.
                     </li>
                     <li>
                       Находясь за пределами круга, вы каждую секунду получаете урон.
@@ -394,7 +404,7 @@
                   Вы можете вернуться к фонтану, чтобы купить предметы.
                 </li>
                 <li>
-                  В начале матча оба игрока получают по 500 золота.
+                  В начале матча оба игрока получают по <span>500 золота</span>.
                 </li>
                 <li>
                   Пассивный приток золота и опыта увеличен.
@@ -411,43 +421,47 @@
               <img src="img/content/event-img-2.jpg" alt="hero art">
               <p class="block__regular-paragraph regular-paragraph">
                 В этом обновлении мы внесем
-                <a href="https://wildrift.leagueoflegends.com/ru-ru/news/game-updates/updates-to-aram/"
+                <a class="regular-paragraph-link"
+                  href="https://wildrift.leagueoflegends.com/ru-ru/news/game-updates/updates-to-aram/"
                   target="_blank">изменения</a>
                 в ARAM на стадии выбора чемпиона. Вы сможете покупать дополнительные очки
                 перевыбора за энергию поро. Вот как это работает.
               </p>
               <ul>
                 <li>
-                  Использовать очки перевыбора можно только на экране выбора чемпиона.
+                  Использовать очки перевыбора можно <span>только</span> на экране выбора чемпиона.
                 </li>
                 <li>
-                  У вас может быть до двух бесплатных очков перевыбора, и восстанавливаются они с той же скоростью.
+                  У вас может быть до <span>двух</span> бесплатных очков перевыбора, и восстанавливаются они с той же
+                  скоростью.
                 </li>
                 <li>
                   Если вы используете все бесплатные очки перевыбора, у вас появится возможность купить дополнительные
                   за энергию поро.
                 </li>
                 <li>
-                  Вы не можете использовать более 2 очков за матч. Сначала используются бесплатные, затем –
+                  Вы не можете использовать <span>более 2 очков</span> за матч. <span>Сначала используются
+                    бесплатные</span>, затем –
                   дополнительные.
                   <ul>
                     <li>
-                      Другими словами, если при входе в лобби у вас уже было 2 бесплатных очка перевыбора, вы не сможете
+                      Другими словами, если при входе в лобби у вас уже было <span>2</span> бесплатных очка перевыбора,
+                      вы <span>не сможете</span>
                       купить
                       дополнительные.
                     </li>
                   </ul>
                 </li>
                 <li>
-                  Всего можно купить до 3 дополнительных очков перевыбора в день.
+                  Всего можно купить до <span>3 дополнительных очков перевыбора в день</span>.
                 </li>
                 <li>
-                  В первый раз вам нужно будет заплатить 50 ед. энергии поро, во второй – 100 ед. энергии поро, а в
-                  третий – 200 ед.
-                  энергии поро.
+                  В первый раз вам нужно будет заплатить <span>50 ед. энергии поро</span>, во второй – <span>100 ед.
+                    энергии поро</span>, а в
+                  третий – <span>200 ед. энергии поро.</span>
                 </li>
                 <li>
-                  Дополнительные очки перевыбора нельзя накапливать.
+                  Дополнительные очки перевыбора <span>нельзя</span> накапливать.
                 </li>
                 <li>
                   Работают они так же, как бесплатные: позволяют союзникам выбрать чемпионов, отправленных на скамейку
@@ -492,49 +506,153 @@
 
             </div>
 
-            <h2 class="news__title title">
+            <h2 id="champion-changes" class="news__title title">
               CHAMPION CHANGES
             </h2>
 
-            <div class="news__card">
-              <img src="img/content/champion-1.jpg" alt="game process">
-              <h3 class="card__title title">
-                АКАЛИ
-              </h3>
-              <p class="card__regular-paragraph regular-paragraph">
-                Сейчас за Акали трудно побеждать даже опытным игрокам, освоившим все ее механики, не говоря уже о тех,
-                кто только
-                изучает этого чемпиона. Надеемся, эти усиления помогут Вольной убийце эффективнее расправляться с
-                врагами.
-              </p>
-              <hr>
-              <h4 class="card__subtitle subtitle">
-                ОСНОВНЫЕ ПОКАЗАТЕЛИ
-              </h4>
-              <ul>
-                <li>
-                  Базовый запас здоровья: 570 → 600.
-                </li>
-              </ul>
-              <hr>
-              <div class=".card__ability-text">
-                <img src="img/content/akali_2.jpg" alt="ПОКРОВ СУМЕРЕК">
-                <div class="card__ability-text">
-                  <h4 class="card__ability-title subtitle">
-                    ПОКРОВ СУМЕРЕК
+            <div class="news__cards">
+
+              <div class="card">
+                <img src="img/content/champion-1.jpg" alt="game process">
+                <div class="card__wrapper">
+                  <h3 class="card__title title">
+                    АКАЛИ
+                  </h3>
+                  <p class="card__regular-paragraph regular-paragraph">
+                    Сейчас за Акали трудно побеждать даже опытным игрокам, освоившим все ее механики, не говоря уже о
+                    тех,
+                    кто только
+                    изучает этого чемпиона. Надеемся, эти усиления помогут Вольной убийце эффективнее расправляться с
+                    врагами.
+                  </p>
+                  <div class="separator"></div>
+                  <h4 class="card__subtitle subtitle">
+                    ОСНОВНЫЕ ПОКАЗАТЕЛИ
                   </h4>
                   <ul>
                     <li>
-                      Восстановление энергии: 80 → 100.
-                    </li>
-                    <li>
-                      Максимальное восстановление энергии: 80 → 100.
+                      Базовый запас здоровья: 570 → <span>600</span>.
                     </li>
                   </ul>
+                  <div class="separator"></div>
+                  <div class="card__ability">
+                    <img src="img/content/akali_2.jpg" alt="ПОКРОВ СУМЕРЕК">
+                    <div class="card__ability-text">
+                      <h4 class="card__ability-title subtitle">
+                        ПОКРОВ СУМЕРЕК
+                      </h4>
+                      <ul>
+                        <li>
+                          Восстановление энергии: 80 → <span>100</span>.
+                        </li>
+                        <li>
+                          Максимальное восстановление энергии: 80 → <span>100</span>.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="img/content/champion-2.jpg" alt="game process">
+                <div class="card__wrapper">
+                  <h3 class="card__title title">
+                    ДЖЕЙС
+                  </h3>
+                  <p class="card__regular-paragraph regular-paragraph">
+                    Чтобы научиться грамотно использовать стойку Джейса с молотом, требуется время, поэтому мы немного усиливаем стойку с
+                    пушкой, на которую в основном полагаются новички. Теперь освоить тонкости игры за Джейса в ближнем бою станет чуточку
+                    проще.
+                  </p>
+                  <div class="separator"></div>
+                  <h4 class="card__subtitle subtitle">
+                    ОСНОВНЫЕ ПОКАЗАТЕЛИ
+                  </h4>
+                  <ul>
+                    <li>
+                      Восстановление маны: 9 → <span>12</span>.
+                    </li>
+                  </ul>
+                  <div class="separator"></div>
+                  <div class="card__ability">
+                    <img src="img/content/Jayce_3.jpg" alt="ГРОХОЧУЩИЙ УДАР ">
+                    <div class="card__ability-text">
+                      <h4 class="card__ability-title subtitle">
+                        ГРОХОЧУЩИЙ УДАР / ВРАТА УСКОРЕНИЯ
+                      </h4>
+                      <ul>
+                        <li>
+                          Время перезарядки: 16 секунд → <span>100</span>.
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="img/content/champion-3.jpg" alt="game process">
+                <div class="card__wrapper">
+                  <h3 class="card__title title">
+                    ДЖИН
+                  </h3>
+                  <p class="card__regular-paragraph regular-paragraph">
+                    Мы хотим, чтобы у Джина было больше возможностей повлиять на ход игры. Предыдущее усиление, увеличивающее
+                    продолжительность обездвиживания, которое накладывает Смертельное действо, не сильно помогло ему в этом плане, поэтому
+                    мы откатываем изменение и взамен сокращаем время произнесения.
+                  </p>
+                  <div class="separator"></div>
+                  <div class="card__ability">
+                    <img src="img/content/jhin_2.jpg" alt="СМЕРТЕЛЬНОЕ ДЕЙСТВО">
+                    <div class="card__ability-text">
+                      <h4 class="card__ability-title subtitle">
+                        СМЕРТЕЛЬНОЕ ДЕЙСТВО
+                      </h4>
+                      <ul>
+                        <li>
+                          Время произнесения: 11 кадров → <span>100</span>.
+                        </li>
+                        <li>
+                          Продолжительность обездвиживания: 1,5/1,75/2/2,25 секунды → <span>1,25/1,5/1,75/2 секунды.</span>.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="img/content/champion-4.jpg" alt="game process">
+                <div class="card__wrapper">
+                  <h3 class="card__title title">
+                    ЛЕОНА
+                  </h3>
+                  <p class="card__regular-paragraph regular-paragraph">
+                    Несмотря не недавние усиления, Леона все еще уступает остальным чемпионам поддержки на линии дракона. Чтобы она чаще
+                    сияла в командных сражениях, мы увеличиваем продолжительность эффектов контроля ее абсолютного умения – Солнечной
+                    вспышки.
+                  </p>
+                  <div class="separator"></div>
+                  <div class="card__ability">
+                    <img src="img/content/Leona_4.jpg" alt="СОЛНЕЧНАЯ ВСПЫШКА">
+                    <div class="card__ability-text">
+                      <h4 class="card__ability-title subtitle">
+                        СОЛНЕЧНАЯ ВСПЫШКА
+                      </h4>
+                      <ul>
+                        <li>
+                          Продолжительность замедления и оглушения: 1,5 секунды → <span>1,75 секунды.</span>.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 
             </div>
+
 
           </div>
 

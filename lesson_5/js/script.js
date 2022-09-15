@@ -1,5 +1,4 @@
 window.addEventListener('load', function () {
-
 	let menu = document.querySelector('.menu__list');
 
 	if (window.location.hash != '') scrollToId(window.location.hash);
@@ -16,15 +15,22 @@ window.addEventListener('load', function () {
 	});
 
 	window.addEventListener('scroll', function () {
-		let sections = document.querySelectorAll('h2[id]');
+		let sections = document.querySelectorAll('h3[id]');
 		let centerY = document.documentElement.clientHeight / 2;
-
+		
 		sections.forEach(section => {
 			if (section.getBoundingClientRect().top <= centerY) {
 				menu.querySelector('.menu__link-active').classList.remove('menu__link-active');
 				document.querySelector(`a[href$='${section.id}']`).classList.add('menu__link-active');
 			}
 		});
+		// дурацкий костыль - старт
+		let sectionH2 = document.querySelector('h2[id]');
+		if (sectionH2.getBoundingClientRect().top <= centerY) {
+			menu.querySelector('.menu__link-active').classList.remove('menu__link-active');
+			document.querySelector(`a[href$='${sectionH2.id}']`).classList.add('menu__link-active');
+		}
+		// дурацкий костыль - конец
 	});
 
 	function scrollToId(id) {
