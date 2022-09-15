@@ -1,0 +1,58 @@
+@import url('reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// ============================================================================
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url('../fonts/Spiegel.woff2') format('woff2'),
+        url('../fonts/Spiegel.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spiegel';
+    src: url('../fonts/Spiegel-Bold.woff2') format('woff2'),
+        url('../fonts/Spiegel-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beaufort for LOL Bold';
+    src: url('../fonts/Beaufort for LOL Bold.woff2') format('woff2'),
+        url('../fonts/Beaufort for LOL Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+// ============================================================================
+
+img {
+    display: block;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+
+    &>main {
+        flex: 1 1 auto;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+// ============================================================================
