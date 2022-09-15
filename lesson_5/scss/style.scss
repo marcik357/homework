@@ -187,7 +187,7 @@ iframe {
 
 // ============================================================================
 
-h1 + p {
+h1+p {
     text-align: justify;
 }
 
@@ -218,6 +218,7 @@ h1 + p {
     &__title {
         font-size: 80px;
         margin: 25px 0;
+        text-shadow: 1px 3px 5px #32c8ff, 2px 3px 15px rgb(243, 131, 2);
     }
 
     // .introduction__regular-paragraph

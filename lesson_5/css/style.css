@@ -177,6 +177,7 @@ h1 + p {
 .introduction__title {
   font-size: 80px;
   margin: 25px 0;
+  text-shadow: 1px 3px 5px #32c8ff, 2px 3px 15px rgb(243, 131, 2);
 }
 .introduction__authors {
   display: -webkit-box;
