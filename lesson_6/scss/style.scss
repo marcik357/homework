@@ -201,7 +201,7 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    margin-left: 58px;
+    padding-left: 58px;
 
     &[class^="_icon-"]::before,
     &[class*=" _icon-"]::before {
@@ -217,14 +217,14 @@
 
 .list-item {
     position: relative;
-    margin-left: 32px;
+    padding-left: 32px;
     margin-bottom: 4px;
     line-height: 160%;
 
     & [class^="_icon-"]::before,
     & [class*=" _icon-"]::before {
         position: absolute;
-        left: -32px;
+        left: 0;
         top: 5px;
         color: #FF3F3A;
     }

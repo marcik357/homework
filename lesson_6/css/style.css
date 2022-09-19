@@ -162,7 +162,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
-  margin-left: 58px;
+  padding-left: 58px;
 }
 .blockquote[class^=_icon-]::before, .blockquote[class*=" _icon-"]::before {
   position: absolute;
@@ -176,13 +176,13 @@
 
 .list-item {
   position: relative;
-  margin-left: 32px;
+  padding-left: 32px;
   margin-bottom: 4px;
   line-height: 160%;
 }
 .list-item [class^=_icon-]::before, .list-item [class*=" _icon-"]::before {
   position: absolute;
-  left: -32px;
+  left: 0;
   top: 5px;
   color: #FF3F3A;
 }
