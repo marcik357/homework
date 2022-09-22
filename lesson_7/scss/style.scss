@@ -39,19 +39,16 @@
     flex-direction: column;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
-    background-color: #dbf5fd;
 
     &>main {
         flex: 1 1 auto;
     }
 }
 
-.container {
+[class*='__container'] {
     margin: 0 auto;
     max-width: 840px;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 2px 2px 10px #787A80;
+    padding: 0 15px;
     border-radius: 5px;
     position: relative;
 }
@@ -71,11 +68,45 @@
 }
 
 
+
+// ============================================================================
+
+
+
+.event {
+    background: url(../img/circles.svg) 0 100% no-repeat,
+        url(../img/dots.svg) 100% 50% no-repeat,
+        url(../img/shapes.svg) 172px 50px no-repeat,
+        url(../img/arrows.svg) 80% 100% no-repeat,
+        linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+
+    // .event__container
+    &__container {
+        text-align: center;
+        padding: 120px 0;
+    }
+
+    // .event__subtitle
+    &__subtitle.subtitle {
+        color: #FF3F3A;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    // .event__title
+    &__title {}
+}
+
+
 // ============================================================================
 
 
 .news {
-    margin: 30px 0;
+    margin: 30px 0 120px;
 
     // .news__title
     &__title {
@@ -126,25 +157,6 @@
     &__info-share {
         margin-left: auto;
 
-        span {
-            margin-right: 17px;
-        }
-
-        [class^="_icon-"],
-        [class*=" _icon-"] {
-            color: #787A80;
-            transition: all .3s;
-        }
-
-        [class^="_icon-"]:hover,
-        [class*=" _icon-"]:hover {
-            color: #FF3F3A;
-        }
-
-        li:not(:last-child) {
-            margin-right: 15px;
-        }
-
     }
 
     // .news__subtitle
@@ -157,6 +169,10 @@
         margin-bottom: 24px;
     }
 
+    &__text:last-of-type {
+        margin-bottom: 60px;
+    }
+
     // .news__blockquote
     &__blockquote {
         margin: 48px 0;
@@ -167,6 +183,20 @@
 
     // .news__item
     &__item {}
+
+    // .news__footer-info
+    &__footer-info {
+        display: flex;
+        padding: 6px 0;
+    }
+
+    // .news__footer-tags
+    &__footer-tags {}
+
+    // .news__footer-share
+    &__footer-share {
+        margin-left: auto;
+    }
 }
 
 .title {
@@ -190,6 +220,25 @@
 .share {
     display: flex;
     font-weight: 700;
+
+    span {
+        margin-right: 17px;
+    }
+
+    [class^="_icon-"],
+    [class*=" _icon-"] {
+        color: #787A80;
+        transition: all .3s;
+    }
+
+    [class^="_icon-"]:hover,
+    [class*=" _icon-"]:hover {
+        color: #FF3F3A;
+    }
+
+    li:not(:last-child) {
+        margin-right: 15px;
+    }
 
     ul {
         display: flex;
@@ -230,71 +279,113 @@
     }
 }
 
+.tags {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+
+    span {
+        margin-right: 12px;
+    }
+
+    ul {
+        display: flex;
+
+        li:not(last-child) {
+            margin-right: 12px;
+            font-size: 14px;
+            color: #787A80;
+        }
+
+    }
+}
+
+.tag {
+    padding: 5.5px 16px;
+    border: 1px solid #D7DADD;
+    border-radius: 4px;
+    transition: all .3s;
+
+    &::before {
+        content: '#';
+    }
+
+    &:hover {
+        color: #FF3F3A;
+        border-color: #FF3F3A;
+    }
+}
+
 
 // ============================================================================
 
-.lesson {
-    margin-bottom: 30px;
+
+.subscribe {
+    background: #F4F5F7;
+
+    // .subscribe__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .subscribe__img
+    &__img {
+        margin: 0 15px 0 -37px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    // .subscribe__content
+    &__content {
+        margin: 100px 0 120px;
+        max-width: 600px;
+    }
+
+    // .subscribe__title
+    &__title {
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+
+    // .subscribe__form
+    &__form {}
+
+    // .subscribe__form-row
+    &__form-row {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    // .subscribe__form-input
+    &__form-input {
+        padding: 13px 16px;
+        margin-right: 24px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    // .subscribe__form-submit
+    &__form-submit {
+        font-weight: 700;
+        line-height: 325%;
+        padding: 0 40px;
+        background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        border-radius: 4px;
+        color: #FFF;
+        letter-spacing: 0.5px;
+    }
 }
 
-.lesson__content {
-    margin-bottom: 50px;
-}
 
-.lesson__content-text {
-    max-height: 240px;
-    overflow-y: scroll;
-}
+// ============================================================================
 
-.lesson__content:nth-child(2) .lesson__content-text {
-    overflow-y: hidden;
-    border: 13px solid red;
-    border-right: 5px dotted blue;
-    border-radius: 25px 0 80px 0;
-}
-
-.lesson__content-span {
-    font-size: 0;
-    // box-shadow: none;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 2px 2px 10px rgb(0 0 0 / 60%);
-
-    &:hover {
-        box-shadow: inset 2px 2px 10px rgb(0 0 0 / 60%);
-    }
-
-    span {
-        font-size: 2rem;
-    }
-
-    a {
-        font-size: 2rem;
-    }
-
-    a:first-of-type {
-        visibility: hidden;
-    }
-
-    a:nth-of-type(2) {
-        display: none;
-    }
-
-    a:last-of-type {
-        display: inline-block;
-        opacity: .5;
-        visibility: visible;
-        max-width: 100px;
-        text-shadow: 1px 2px 5px #000;
-        outline: 3px dotted red;
-    }
-}
 
 .footer {
-
-    img {
-        border-radius: 50%;
-        display: block;
-        margin-left: auto;
-    }
+    height: 100vh;
+    background: url(../img/cyberpunk-logo.png) 0 0/30% repeat-y,
+        url(../img/cyberpunk.jpeg) center / cover no-repeat  fixed;
 }
