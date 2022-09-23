@@ -128,27 +128,29 @@
 
     // .news__info-date
     &__info-date {
-        margin: 0 48px 0 24px;
+        padding-left: 24px;
+        margin-right: 24px;
         position: relative;
 
         & [class^="_icon-"]::before,
         & [class*=" _icon-"]::before {
             color: #787A80;
             position: absolute;
-            left: -24px;
+            left: 0;
             top: 5px;
         }
     }
 
     // .news__info-time-to-read
     &__info-time-to-read {
+        padding-left: 24px;
         position: relative;
 
         & [class^="_icon-"]::before,
         & [class*=" _icon-"]::before {
             color: #787A80;
             position: absolute;
-            left: -24px;
+            left: 0;
             top: 5px;
         }
     }
@@ -390,5 +392,5 @@
 .footer {
     height: 100vh;
     background: url(../img/cyberpunk-logo.png) 0 0/30% repeat-y,
-        url(../img/cyberpunk.jpeg) center / cover no-repeat  fixed;
+        url(../img/cyberpunk.jpeg) center / cover no-repeat fixed;
 }

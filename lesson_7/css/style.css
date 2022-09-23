@@ -93,22 +93,24 @@
   max-width: 100%;
 }
 .news__info-date {
-  margin: 0 48px 0 24px;
+  padding-left: 24px;
+  margin-right: 24px;
   position: relative;
 }
 .news__info-date [class^=_icon-]::before, .news__info-date [class*=" _icon-"]::before {
   color: #787A80;
   position: absolute;
-  left: -24px;
+  left: 0;
   top: 5px;
 }
 .news__info-time-to-read {
+  padding-left: 24px;
   position: relative;
 }
 .news__info-time-to-read [class^=_icon-]::before, .news__info-time-to-read [class*=" _icon-"]::before {
   color: #787A80;
   position: absolute;
-  left: -24px;
+  left: 0;
   top: 5px;
 }
 .news__info-share {
