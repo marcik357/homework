@@ -230,10 +230,12 @@
   display: -ms-flexbox;
   display: flex;
 }
-.tags ul li:not(last-child) {
-  margin-right: 12px;
+.tags ul li {
   font-size: 14px;
   color: #787A80;
+}
+.tags ul li:not(:last-child) {
+  margin-right: 12px;
 }
 
 .tag {

@@ -291,10 +291,13 @@
     ul {
         display: flex;
 
-        li:not(last-child) {
-            margin-right: 12px;
+        li {
             font-size: 14px;
             color: #787A80;
+        }
+
+        li:not(:last-child) {
+            margin-right: 12px;
         }
 
     }
