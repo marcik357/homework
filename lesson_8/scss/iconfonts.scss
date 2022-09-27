@@ -1,19 +1,20 @@
 @font-face {
   font-family: 'icons';
-  src:  url('../fonts/icons.eot?6f5obx');
-  src:  url('../fonts/icons.eot?6f5obx#iefix') format('embedded-opentype'),
-    url('../fonts/icons.ttf?6f5obx') format('truetype'),
-    url('../fonts/icons.woff?6f5obx') format('woff'),
-    url('../fonts/icons.svg?6f5obx#icons') format('svg');
+  src: url('../fonts/icons.eot?rwexxl');
+  src: url('../fonts/icons.eot?rwexxl#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf?rwexxl') format('truetype'),
+    url('../fonts/icons.woff?rwexxl') format('woff'),
+    url('../fonts/icons.svg?rwexxl#icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="_icon-"]::before, [class*=" _icon-"]::before {
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
-  // speak: never;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -25,24 +26,46 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-blockquote:before {
+._icon-behance:before {
   content: "\e900";
 }
-._icon-calendar:before {
+
+._icon-blockquote:before {
   content: "\e901";
 }
-._icon-clock:before {
+
+._icon-calendar:before {
   content: "\e902";
 }
-._icon-facebook:before {
+
+._icon-clock:before {
   content: "\e903";
 }
-._icon-linkedin:before {
+
+._icon-facebook:before {
   content: "\e904";
 }
-._icon-list-icon:before {
+
+._icon-linkedin:before {
   content: "\e905";
 }
-._icon-twitter:before {
+
+._icon-list-icon:before {
   content: "\e906";
+}
+
+._icon-play:before {
+  content: "\e907";
+}
+
+._icon-star:before {
+  content: "\e908";
+}
+
+._icon-twitter:before {
+  content: "\e909";
+}
+
+._icon-user:before {
+  content: "\e90a";
 }
