@@ -359,7 +359,7 @@
 
 
 .curator {
-    background: url(../img/circle-curator.svg) calc(50% - 639px) 0 no-repeat;
+    // background: url(../img/circle-curator.svg) calc(50% - 639px) 0 no-repeat;
     padding-top: 66px;
     margin-bottom: 180px;
 
@@ -375,11 +375,10 @@
     // .curator__img
     &__img {
         max-width: 495px;
-        margin-right: 15px;
+        margin-right: 55px;
+        position: relative;
 
         img {
-            object-fit: fill;
-            position: relative;
             left: 19px;
         }
     }
@@ -387,12 +386,24 @@
     &__img::before {
         position: absolute;
         content: '';
+        width: 250px;
+        height: 250px;
+        top: -65px;
+        left: -160px;
+        background: url(../img/circle-curator.svg) 0 0 no-repeat;
+        z-index: -1;
+    }
+
+    &__img::after {
+        position: absolute;
+        content: '';
         width: 495px;
         height: 580px;
-        bottom: 0;
-        left: 15px;
+        top: 20px;
+        left: -19px;
         background: #FFCF2D;
         border-radius: 4px;
+        z-index: -1;
     }
 
     // .curator__info
