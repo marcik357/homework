@@ -213,9 +213,6 @@
     // .event__subtitle
     &__subtitle.subtitle {
         color: #FF3F3A;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 150%;
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-bottom: 12px;
@@ -243,6 +240,7 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 180px;
+        align-items: start;
     }
 
     // .about-course__description
