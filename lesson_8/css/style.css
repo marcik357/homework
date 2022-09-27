@@ -1,0 +1,311 @@
+@import url("reset.css");
+@import url("iconfonts.css");
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/latoregular.woff2") format("woff2"), url("../fonts/latoregular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/latobold.woff2") format("woff2"), url("../fonts/latobold.woff2") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/latoblack.woff2") format("woff2"), url("../fonts/latoblack.woff") format("woff");
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+[class*=__container] {
+  margin: 0 auto;
+  max-width: 840px;
+  padding: 0 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.wrapper {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #424551;
+}
+
+.header {
+  display: none;
+}
+
+.event {
+  background: url(../img/circles.svg) 0 100% no-repeat, url(../img/dots.svg) 100% 50% no-repeat, url(../img/shapes.svg) 172px 50px no-repeat, url(../img/arrows.svg) 80% 100% no-repeat, -o-linear-gradient(34.05deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+  background: url(../img/circles.svg) 0 100% no-repeat, url(../img/dots.svg) 100% 50% no-repeat, url(../img/shapes.svg) 172px 50px no-repeat, url(../img/arrows.svg) 80% 100% no-repeat, linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
+}
+.event__container {
+  text-align: center;
+  padding: 120px 0;
+}
+.event__subtitle.subtitle {
+  color: #FF3F3A;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.news {
+  margin: 30px 0 120px;
+}
+.news__title {
+  margin-bottom: 26px;
+}
+.news__info {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 160%;
+}
+.news__img {
+  margin-bottom: 60px;
+  max-width: 100%;
+}
+.news__info-date {
+  padding-left: 24px;
+  margin-right: 24px;
+  position: relative;
+}
+.news__info-date [class^=_icon-]::before, .news__info-date [class*=" _icon-"]::before {
+  color: #787A80;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.news__info-time-to-read {
+  padding-left: 24px;
+  position: relative;
+}
+.news__info-time-to-read [class^=_icon-]::before, .news__info-time-to-read [class*=" _icon-"]::before {
+  color: #787A80;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.news__info-share {
+  margin-left: auto;
+}
+.news__subtitle {
+  margin-bottom: 24px;
+}
+.news__text {
+  margin-bottom: 24px;
+}
+.news__text:last-of-type {
+  margin-bottom: 60px;
+}
+.news__blockquote {
+  margin: 48px 0;
+}
+.news__footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px 0;
+}
+.news__footer-share {
+  margin-left: auto;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 130%;
+  color: #1E212C;
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1E212C;
+}
+
+.text {
+  line-height: 160%;
+}
+
+.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+}
+.share span {
+  margin-right: 17px;
+}
+.share [class^=_icon-],
+.share [class*=" _icon-"] {
+  color: #787A80;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.share [class^=_icon-]:hover,
+.share [class*=" _icon-"]:hover {
+  color: #FF3F3A;
+}
+.share li:not(:last-child) {
+  margin-right: 15px;
+}
+.share ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blockquote {
+  color: #1E212C;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  padding-left: 58px;
+}
+.blockquote[class^=_icon-]::before, .blockquote[class*=" _icon-"]::before {
+  position: absolute;
+  left: 15px;
+  color: #FF3F3A;
+}
+
+.list {
+  margin-bottom: 24px;
+}
+
+.list-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 4px;
+  line-height: 160%;
+}
+.list-item [class^=_icon-]::before, .list-item [class*=" _icon-"]::before {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  color: #FF3F3A;
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+.tags span {
+  margin-right: 12px;
+}
+.tags ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tags ul li {
+  font-size: 14px;
+  color: #787A80;
+}
+.tags ul li:not(:last-child) {
+  margin-right: 12px;
+}
+
+.tag {
+  padding: 5.5px 16px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.tag::before {
+  content: "#";
+}
+.tag:hover {
+  color: #FF3F3A;
+  border-color: #FF3F3A;
+}
+
+.subscribe {
+  background: #F4F5F7;
+}
+.subscribe__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.subscribe__img {
+  margin: 0 15px 0 -37px;
+}
+.subscribe__img img {
+  max-height: 100%;
+}
+.subscribe__content {
+  margin: 100px 0 120px;
+  max-width: 600px;
+}
+.subscribe__title {
+  font-size: 32px;
+  margin-bottom: 48px;
+}
+.subscribe__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+.subscribe__form-input {
+  padding: 13px 16px;
+  margin-right: 24px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  width: 100%;
+}
+.subscribe__form-submit {
+  font-weight: 700;
+  line-height: 325%;
+  padding: 0 40px;
+  background: -o-linear-gradient(34.05deg, #FF3F3A 0%, #F75E05 100%);
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  border-radius: 4px;
+  color: #FFF;
+  letter-spacing: 0.5px;
+}
+
+.footer {
+  height: 100vh;
+  background: url(../img/cyberpunk-logo.png) 0 0/30% repeat-y, url(../img/cyberpunk.jpeg) center/cover no-repeat fixed;
+}
