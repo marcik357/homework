@@ -155,7 +155,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
   height: 2px;
   width: 0;
   background-color: rgb(255, 63, 58);
@@ -165,6 +165,7 @@
 }
 .menu__item:hover:before {
   width: 100%;
+  left: 0;
 }
 .menu__item:not(:last-child) {
   margin-right: 40px;
@@ -199,6 +200,13 @@
 }
 .buttons__login::before {
   margin-right: 10px;
+}
+.buttons__login::after {
+  content: " /";
+  color: #424551;
+}
+.buttons__login:hover::after {
+  color: #424551;
 }
 .buttons__registr {
   -webkit-transition: all 0.3s;
@@ -402,6 +410,12 @@
   margin-right: 30px;
 }
 
+.homework {
+  margin-bottom: 50px;
+}
+.homework > *:last-child {
+  margin-bottom: 0;
+}
 .orange-btn {
   font-weight: 700;
   line-height: 44px;
@@ -421,7 +435,7 @@
   padding: 20px 0;
   text-align: center;
 }
-.state__link {
+.state__link:not(:last-of-type) {
   margin-bottom: 50px;
 }
 .state__link:nth-child(odd):hover {
@@ -542,4 +556,120 @@
       -ms-flex-pack: center;
           justify-content: center;
   scale: 1;
+}
+
+.game {
+  margin-bottom: 50px;
+  cursor: crosshair;
+}
+.game__field {
+  height: 550px;
+  width: 100%;
+  border-radius: 10px;
+  background: #f1d6d5;
+}
+
+.path-start.path {
+  position: relative;
+  height: 50px;
+  width: 100px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: visible;
+  background: -o-linear-gradient(34.05deg, #FF3F3A 0%, #F75E05 100%);
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+}
+
+.path {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  visibility: hidden;
+  background-color: #FF3F3A;
+}
+
+.path-start:hover + .path {
+  visibility: visible;
+}
+
+.path:hover {
+  visibility: visible;
+}
+
+.path:hover + .path {
+  visibility: visible;
+}
+
+.first {
+  width: 50%;
+  height: 50px;
+}
+
+.second {
+  width: 30%;
+  height: 50px;
+  margin-left: 40%;
+}
+
+.third {
+  width: 10%;
+  height: 150px;
+  margin-left: 60%;
+}
+
+.fourth {
+  width: 50%;
+  height: 50px;
+  margin-left: 20%;
+}
+
+.fifth {
+  width: 4%;
+  height: 50px;
+  margin-left: 20%;
+}
+
+.sixth {
+  width: 30%;
+  height: 20px;
+  margin-left: 20%;
+}
+
+.seventh {
+  width: 1%;
+  height: 80px;
+  margin-left: 49%;
+}
+
+.finish {
+  width: 11%;
+  height: 50px;
+  margin-left: 44%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game__field:has(> .finish:hover) {
+  background: url(../img/thatsallfolkx.webp) center/cover no-repeat;
+}
+
+.footer {
+  height: 50px;
+  background: #1E212C;
 }

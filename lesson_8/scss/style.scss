@@ -175,7 +175,7 @@
         content: "";
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 50%;
         height: 2px;
         width: 0;
         background-color: rgba(255, 63, 58, 1);
@@ -184,6 +184,7 @@
 
     &__item:hover:before {
         width: 100%;
+        left: 0;
     }
 
     &__item:not(:last-child) {
@@ -228,6 +229,15 @@
 
     &__login::before {
         margin-right: 10px;
+    }
+
+    &__login::after {
+        content: ' /';
+        color: #424551;
+    }
+
+    &__login:hover::after {
+        color: #424551;
     }
 
     // .buttons__registr
@@ -535,6 +545,12 @@
 
 .homework {
 
+    margin-bottom: 50px;
+
+    &>*:last-child {
+        margin-bottom: 0;
+    }
+
     // .homework__container
     &__container {}
 }
@@ -559,7 +575,7 @@
         text-align: center;
     }
 
-    &__link {
+    &__link:not(:last-of-type) {
         margin-bottom: 50px;
     }
 
@@ -676,7 +692,111 @@
 
 // ============================================================================
 
+.game {
+    margin-bottom: 50px;
+    cursor: crosshair;
+
+    &__field {
+        height: 550px;
+        width: 100%;
+        border-radius: 10px;
+        background: #f1d6d5;
+    }
+}
+
+.path-start.path {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+}
+
+.path {
+    transition: all 0.3s;
+    visibility: hidden;
+    background-color: #FF3F3A;
+}
+
+.path-start:hover+.path {
+    visibility: visible;
+}
+
+.path:hover {
+    visibility: visible;
+}
+
+.path:hover+.path {
+    visibility: visible;
+}
+
+
+.first {
+    width: 50%;
+    height: 50px;
+}
+
+.second {
+    width: 30%;
+    height: 50px;
+    margin-left: 40%;
+}
+
+.third {
+    width: 10%;
+    height: 150px;
+    margin-left: 60%;
+}
+
+.fourth {
+    width: 50%;
+    height: 50px;
+    margin-left: 20%;
+}
+
+.fifth {
+    width: 4%;
+    height: 50px;
+    margin-left: 20%;
+}
+
+.sixth {
+    width: 30%;
+    height: 20px;
+    margin-left: 20%;
+}
+
+.seventh {
+    width: 1%;
+    height: 80px;
+    margin-left: 49%;
+}
+
+.finish {
+    width: 11%;
+    height: 50px;
+    margin-left: 44%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game__field:has(> .finish:hover) {
+    background: url(../img/thatsallfolkx.webp) center/cover no-repeat;
+}
+
+
+// ============================================================================
 
 
 
-.footer {}
+
+.footer {
+    height: 50px;
+    background: #1E212C;
+}
