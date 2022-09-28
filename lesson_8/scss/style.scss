@@ -81,6 +81,13 @@
     background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
     border-radius: 4px;
     color: #fff;
+    border: 1px solid #ff3f3a;
+    transition: all .5s;
+}
+
+.join-btn:hover {
+    background: rgba(255, 255, 255, 0);
+    color: #ff3f3a;
 }
 
 .share {
@@ -115,10 +122,11 @@
 
 
 .header {
-    position: absolute;
+    position: fixed;
     z-index: 5;
     width: 100%;
     padding: 20px 0;
+    background: rgba(255, 255, 255, 0.95) linear-gradient(55.95deg, rgba(255, 63, 58, 0.2) 0%, rgba(247, 94, 5, 0.2) 100%);
 
     // .header__container
     &__container {}
@@ -155,7 +163,28 @@
     }
 
     // .menu__item
-    &__item {}
+    &__item {
+        position: relative;
+    }
+
+    &__item:hover {
+        color: rgba(255, 63, 58, 1);
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: rgba(255, 63, 58, 1);
+        transition-duration: 0.3s;
+    }
+
+    &__item:hover:before {
+        width: 100%;
+    }
 
     &__item:not(:last-child) {
         margin-right: 40px;
@@ -177,18 +206,39 @@
         padding: 0 40px;
         background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
         border-radius: 4px;
+        border: 1px solid #ff3f3a;
         color: #fff;
         margin-right: 36px;
+        transition: all .5s;
+    }
+
+    &__consultation:hover {
+        background: rgba(255, 255, 255, 0);
+        color: #ff3f3a;
     }
 
     // .buttons__user
     &__user {}
 
     // .buttons__login
-    &__login {}
+    &__login {
+        transition: all .3s;
+    }
+
+
+    &__login::before {
+        margin-right: 10px;
+    }
 
     // .buttons__registr
-    &__registr {}
+    &__registr {
+        transition: all .3s;
+    }
+
+    &__login:hover,
+    &__registr:hover {
+        color: #ff3f3a;
+    }
 }
 
 
@@ -481,6 +531,151 @@
 
 
 // ============================================================================
+
+
+.homework {
+
+    // .homework__container
+    &__container {}
+}
+
+.orange-btn {
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    color: #fff;
+}
+
+.state {
+    position: relative;
+
+    // .state__link
+    &__link {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    &__link {
+        margin-bottom: 50px;
+    }
+
+    &__link:nth-child(odd):hover {
+        background: linear-gradient(90deg, #eb716c 100%, #F75E05 0%);
+        text-transform: uppercase;
+    }
+
+    &__link:nth-child(even):focus {
+        outline: 15px dotted red;
+    }
+
+    &__link:nth-child(2) {
+        text-transform: uppercase;
+        position: relative;
+        background: linear-gradient(90deg, #73e257 0%, #1619c7 50%);
+    }
+
+    &__link:nth-child(2):before,
+    &__link:nth-child(2):after {
+        line-height: 30px;
+        content: '';
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: url(../img/icons/star.svg) 50% 50% no-repeat, #fff;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+
+    &__link:active {
+        background: linear-gradient(90deg, #eb716c 0%, #F75E05 50%);
+    }
+
+    &__link:visited {
+        color: #fff111;
+    }
+
+    &__link {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    #hidden-div {
+        display: none;
+        color: #E5E8ED;
+        font-size: 32px;
+        font-weight: 900;
+        position: absolute;
+        left: 50%;
+        top: -155px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        background: linear-gradient(90deg, #73e257 0%, #1619c7 50%);
+        transition: all .5s;
+    }
+
+    #hidden-div:target {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hidden-circle {
+        display: none;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, #73e257 0%, #1619c7 50%);
+        color: #e92b74;
+        font-size: 32px;
+        font-weight: 900;
+        top: -100px;
+        scale: 0;
+        transition: all .5s;
+    }
+
+    .hidden-circle:nth-of-type(2) {
+        left: 10px;
+    }
+
+    .hidden-circle:nth-of-type(3) {
+        left: 300px;
+    }
+
+    .hidden-circle:nth-of-type(4) {
+        left: 750px;
+    }
+
+    .hidden-circle:nth-of-type(5) {
+        left: 950px;
+    }
+
+    #hidden-div:hover {
+        scale: 2;
+    }
+
+    #hidden-div:hover~* {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scale: 1;
+    }
+}
+
+
+
+
+// ============================================================================
+
 
 
 
