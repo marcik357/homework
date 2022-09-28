@@ -654,8 +654,8 @@
         color: #e92b74;
         font-size: 32px;
         font-weight: 900;
-        top: -100px;
-        scale: 0;
+        top: 100px;
+        transform: scale(0);
         transition: all .5s;
     }
 
@@ -664,11 +664,11 @@
     }
 
     .hidden-circle:nth-of-type(3) {
-        left: 300px;
+        left: 200px;
     }
 
     .hidden-circle:nth-of-type(4) {
-        left: 750px;
+        left: 400px;
     }
 
     .hidden-circle:nth-of-type(5) {
@@ -676,14 +676,14 @@
     }
 
     #hidden-div:hover {
-        scale: 2;
+        transform: scale(2);
     }
 
     #hidden-div:hover~* {
         display: flex;
         align-items: center;
         justify-content: center;
-        scale: 1;
+        transform: scale(1);
     }
 }
 

@@ -524,8 +524,10 @@
   color: #e92b74;
   font-size: 32px;
   font-weight: 900;
-  top: -100px;
-  scale: 0;
+  top: 100px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -534,16 +536,18 @@
   left: 10px;
 }
 .state .hidden-circle:nth-of-type(3) {
-  left: 300px;
+  left: 200px;
 }
 .state .hidden-circle:nth-of-type(4) {
-  left: 750px;
+  left: 400px;
 }
 .state .hidden-circle:nth-of-type(5) {
   left: 950px;
 }
 .state #hidden-div:hover {
-  scale: 2;
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
 }
 .state #hidden-div:hover ~ * {
   display: -webkit-box;
@@ -555,7 +559,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  scale: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .game {
