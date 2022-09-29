@@ -237,6 +237,9 @@
   margin: 0 auto;
 }
 
+.about-course {
+  margin-bottom: 180px;
+}
 .about-course__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,7 +247,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 180px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -339,12 +341,15 @@
           justify-content: space-between;
 }
 .curator__img {
+  max-height: 600px;
   max-width: 495px;
   margin-right: 55px;
   position: relative;
 }
 .curator__img img {
   left: 19px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .curator__img::before {
   position: absolute;

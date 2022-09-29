@@ -291,6 +291,7 @@
 
 
 .about-course {
+    margin-bottom: 180px;
 
     // .about-course__container
     &__container {}
@@ -299,7 +300,6 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 180px;
         align-items: start;
     }
 
@@ -417,7 +417,6 @@
 
 
 .curator {
-    // background: url(../img/circle-curator.svg) calc(50% - 639px) 0 no-repeat;
     padding-top: 66px;
     margin-bottom: 180px;
 
@@ -432,12 +431,14 @@
 
     // .curator__img
     &__img {
+        max-height: 600px;
         max-width: 495px;
         margin-right: 55px;
         position: relative;
 
         img {
             left: 19px;
+            object-fit: contain;
         }
     }
 
