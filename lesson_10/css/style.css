@@ -1258,6 +1258,10 @@ h6 {
   margin-bottom: 24px;
 }
 
+.article__content.news .news__text > *:has(+ blockquote) {
+  margin-bottom: 48px;
+}
+
 .news__text blockquote {
   font-weight: 700;
   font-size: 20px;
@@ -1279,10 +1283,6 @@ h6 {
 
 .news__text blockquote:not(:last-child) {
   margin-bottom: 48px;
-}
-
-.news__text blockquote:has(+ p) {
-  margin-top: 48px;
 }
 
 .news__text ul:not(:last-child) {
