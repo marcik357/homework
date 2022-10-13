@@ -203,7 +203,7 @@ h6 {
 }
 
 .list li:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .list li[class*=_icon-]:before {
@@ -850,8 +850,8 @@ h6 {
   margin-bottom: 48px;
 }
 
-.content-why__item:not(:last-child) {
-  margin-bottom: 40px;
+.list .content-why__item:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 .courses__header {
