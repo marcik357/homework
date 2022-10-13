@@ -1183,7 +1183,7 @@ h6 {
   padding: 152px 0 120px;
 }
 
-.blog .main__container {
+.main--blog .main__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
