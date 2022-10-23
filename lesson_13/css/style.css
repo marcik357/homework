@@ -2,24 +2,645 @@
   height: 100vh;
   background: url("../img/bg.jpg");
   padding: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-1,
+.text-1-2 {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 48px;
+  color: #000;
+  opacity: 0;
+  padding: 10px;
+  border-radius: 15px;
+  background: #fff;
+  z-index: 5;
+  -webkit-animation: text-1 2.5s linear 14s forwards;
+          animation: text-1 2.5s linear 14s forwards;
+}
+
+.text-1-2 {
+  -webkit-animation: text-1 2.5s linear 21s forwards;
+          animation: text-1 2.5s linear 21s forwards;
+}
+
+.text-2,
+.text-2-2 {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  font-size: 48px;
+  color: #000;
+  opacity: 0;
+  padding: 10px;
+  border-radius: 15px;
+  background: #fff;
+  z-index: 5;
+  -webkit-animation: text-1 2.5s linear 16s forwards;
+          animation: text-1 2.5s linear 16s forwards;
+}
+
+.text-2-2 {
+  -webkit-animation: text-1 2.5s linear 19s forwards;
+          animation: text-1 2.5s linear 19s forwards;
+}
+
+@-webkit-keyframes text-1 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes text-1 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes text-2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes text-2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.caps-1 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  right: -300px;
+  top: -300px;
+  z-index: 3;
+  -webkit-animation: caps-1 0.7s linear 11s forwards, move-bot-1 0.7s linear 18s forwards;
+          animation: caps-1 0.7s linear 11s forwards, move-bot-1 0.7s linear 18s forwards;
+}
+.caps-1 img {
+  width: 100%;
+}
+
+.caps-2 {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: -300px;
+  bottom: -300px;
+  z-index: 4;
+  -webkit-animation: caps-2 0.7s linear 12s forwards, move-bot-2 0.7s linear 18s forwards;
+          animation: caps-2 0.7s linear 12s forwards, move-bot-2 0.7s linear 18s forwards;
+}
+.caps-2 img {
+  width: 100%;
 }
 
 .card {
   position: relative;
-  border-radius: 10px;
   overflow: hidden;
   width: 136px;
   height: 210px;
+}
+.card:hover.card--rotate .card__face {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.card:hover.card--rotate .card__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 .card__face {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border-radius: 10px;
 }
 .card__back {
+  border-radius: 10px;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.card-deck {
+  position: relative;
+}
+.card-deck .card {
+  position: absolute;
+}
+.card-deck .card:last-child {
+  -webkit-animation: deck 0.7s linear 0s 8;
+          animation: deck 0.7s linear 0s 8;
+}
+.card-deck .card:first-child {
+  -webkit-animation: move1 0.7s linear 5.6s forwards, move-top 0.7s linear 16.3s forwards;
+          animation: move1 0.7s linear 5.6s forwards, move-top 0.7s linear 16.3s forwards;
+}
+.card-deck .card:first-child .card__face {
+  -webkit-animation: rotate-face 0.7s linear 6.3s forwards;
+          animation: rotate-face 0.7s linear 6.3s forwards;
+}
+.card-deck .card:first-child .card__back {
+  -webkit-animation: rotate-back 0.7s linear 6.3s forwards;
+          animation: rotate-back 0.7s linear 6.3s forwards;
+}
+.card-deck .card:nth-child(2) {
+  -webkit-animation: move2 0.7s linear 6.1s forwards, move-top 0.7s linear 16.3s forwards;
+          animation: move2 0.7s linear 6.1s forwards, move-top 0.7s linear 16.3s forwards;
+}
+.card-deck .card:nth-child(2) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 7s forwards;
+          animation: rotate-face 0.7s linear 7s forwards;
+}
+.card-deck .card:nth-child(2) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 7s forwards;
+          animation: rotate-back 0.7s linear 7s forwards;
+}
+.card-deck .card:nth-child(3) {
+  -webkit-animation: move3 0.7s linear 6.6s forwards, move-top 0.7s linear 16.3s forwards;
+          animation: move3 0.7s linear 6.6s forwards, move-top 0.7s linear 16.3s forwards;
+}
+.card-deck .card:nth-child(3) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 7.3s forwards;
+          animation: rotate-face 0.7s linear 7.3s forwards;
+}
+.card-deck .card:nth-child(3) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 7.3s forwards;
+          animation: rotate-back 0.7s linear 7.3s forwards;
+}
+.card-deck .card:nth-child(4) {
+  -webkit-animation: move4 0.7s linear 7.1s forwards, move-top 0.7s linear 16.3s forwards;
+          animation: move4 0.7s linear 7.1s forwards, move-top 0.7s linear 16.3s forwards;
+}
+.card-deck .card:nth-child(4) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 7.8s forwards;
+          animation: rotate-face 0.7s linear 7.8s forwards;
+}
+.card-deck .card:nth-child(4) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 7.8s forwards;
+          animation: rotate-back 0.7s linear 7.8s forwards;
+}
+.card-deck .card:nth-child(5) {
+  -webkit-animation: move5 0.7s linear 7.6s forwards, move-top 0.7s linear 16.3s forwards;
+          animation: move5 0.7s linear 7.6s forwards, move-top 0.7s linear 16.3s forwards;
+}
+.card-deck .card:nth-child(5) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 8.3s forwards;
+          animation: rotate-face 0.7s linear 8.3s forwards;
+}
+.card-deck .card:nth-child(5) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 8.3s forwards;
+          animation: rotate-back 0.7s linear 8.3s forwards;
+}
+.card-deck .card:nth-child(6) {
+  -webkit-animation: move6 0.7s linear 8s forwards;
+          animation: move6 0.7s linear 8s forwards;
+}
+.card-deck .card:nth-child(6) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 14s forwards;
+          animation: rotate-face 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(6) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 14s forwards;
+          animation: rotate-back 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(7) {
+  -webkit-animation: move7 0.7s linear 8.5s forwards;
+          animation: move7 0.7s linear 8.5s forwards;
+}
+.card-deck .card:nth-child(7) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 14s forwards;
+          animation: rotate-face 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(7) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 14s forwards;
+          animation: rotate-back 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(8) {
+  -webkit-animation: move8 0.7s linear 9s forwards;
+          animation: move8 0.7s linear 9s forwards;
+}
+.card-deck .card:nth-child(8) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 14s forwards;
+          animation: rotate-face 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(8) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 14s forwards;
+          animation: rotate-back 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(9) {
+  -webkit-animation: move9 0.7s linear 9.5s forwards;
+          animation: move9 0.7s linear 9.5s forwards;
+}
+.card-deck .card:nth-child(9) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 14s forwards;
+          animation: rotate-face 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(9) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 14s forwards;
+          animation: rotate-back 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(10) {
+  -webkit-animation: move10 0.7s linear 10s forwards;
+          animation: move10 0.7s linear 10s forwards;
+}
+.card-deck .card:nth-child(10) .card__face {
+  -webkit-animation: rotate-face 0.7s linear 14s forwards;
+          animation: rotate-face 0.7s linear 14s forwards;
+}
+.card-deck .card:nth-child(10) .card__back {
+  -webkit-animation: rotate-back 0.7s linear 14s forwards;
+          animation: rotate-back 0.7s linear 14s forwards;
+}
+@-webkit-keyframes deck {
+  0% {
+    left: 0px;
+    z-index: 2;
+  }
+  50% {
+    left: 150px;
+    z-index: 2;
+  }
+  65% {
+    z-index: 1;
+  }
+  100% {
+    left: 0px;
+    z-index: 1;
+  }
+}
+@keyframes deck {
+  0% {
+    left: 0px;
+    z-index: 2;
+  }
+  50% {
+    left: 150px;
+    z-index: 2;
+  }
+  65% {
+    z-index: 1;
+  }
+  100% {
+    left: 0px;
+    z-index: 1;
+  }
+}
+@-webkit-keyframes move1 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 30%;
+    top: 600px;
+  }
+}
+@keyframes move1 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 30%;
+    top: 600px;
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 40%;
+    top: 600px;
+  }
+}
+@keyframes move2 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 40%;
+    top: 600px;
+  }
+}
+@-webkit-keyframes move3 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 50%;
+    top: 600px;
+  }
+}
+@keyframes move3 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 50%;
+    top: 600px;
+  }
+}
+@-webkit-keyframes move4 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 60%;
+    top: 600px;
+  }
+}
+@keyframes move4 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 60%;
+    top: 600px;
+  }
+}
+@-webkit-keyframes move5 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 70%;
+    top: 600px;
+  }
+}
+@keyframes move5 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 70%;
+    top: 600px;
+  }
+}
+@-webkit-keyframes move6 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 30%;
+    top: 50px;
+  }
+}
+@keyframes move6 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 30%;
+    top: 50px;
+  }
+}
+@-webkit-keyframes move7 {
+  0% {
+    left: 0%;
+    top: 50px;
+  }
+  100% {
+    left: 40%;
+    top: 50px;
+  }
+}
+@keyframes move7 {
+  0% {
+    left: 0%;
+    top: 50px;
+  }
+  100% {
+    left: 40%;
+    top: 50px;
+  }
+}
+@-webkit-keyframes move8 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 50%;
+    top: 50px;
+  }
+}
+@keyframes move8 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 50%;
+    top: 50px;
+  }
+}
+@-webkit-keyframes move9 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 60%;
+    top: 50px;
+  }
+}
+@keyframes move9 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 60%;
+    top: 50px;
+  }
+}
+@-webkit-keyframes move10 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 70%;
+    top: 50px;
+  }
+}
+@keyframes move10 {
+  0% {
+    left: 0%;
+    top: 0px;
+  }
+  100% {
+    left: 70%;
+    top: 50px;
+  }
+}
+@-webkit-keyframes rotate-face {
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+@keyframes rotate-face {
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes rotate-back {
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+@keyframes rotate-back {
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+@-webkit-keyframes caps-1 {
+  100% {
+    right: 30%;
+    top: 300px;
+  }
+}
+@keyframes caps-1 {
+  100% {
+    right: 30%;
+    top: 300px;
+  }
+}
+@-webkit-keyframes caps-2 {
+  100% {
+    left: 35%;
+    bottom: 320px;
+  }
+}
+@keyframes caps-2 {
+  100% {
+    left: 35%;
+    bottom: 320px;
+  }
+}
+@-webkit-keyframes move-top {
+  100% {
+    top: 570px;
+    z-index: 6;
+  }
+}
+@keyframes move-top {
+  100% {
+    top: 570px;
+    z-index: 6;
+  }
+}
+@-webkit-keyframes move-bot-1 {
+  100% {
+    top: 100vh;
+    z-index: 7;
+  }
+}
+@keyframes move-bot-1 {
+  100% {
+    top: 100vh;
+    z-index: 7;
+  }
+}
+@-webkit-keyframes move-bot-2 {
+  100% {
+    bottom: -100vh;
+    z-index: 7;
+  }
+}
+@keyframes move-bot-2 {
+  100% {
+    bottom: -100vh;
+    z-index: 7;
+  }
 }
