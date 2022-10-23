@@ -1,0 +1,25 @@
+.wrapper {
+  height: 100vh;
+  background: url("../img/bg.jpg");
+  padding: 15px;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 136px;
+  height: 210px;
+}
+.card__face {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.card__back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
